@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from 'next/image';
 
 interface YouTubeVideoProps {
   videoId: string;
@@ -7,6 +8,7 @@ interface YouTubeVideoProps {
 }
 
 const YouTubeVideo = ({ videoId, title, publishedAt }: YouTubeVideoProps) => {
+  const thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
@@ -18,10 +20,12 @@ const YouTubeVideo = ({ videoId, title, publishedAt }: YouTubeVideoProps) => {
         rel="noopener noreferrer"
         className="block relative aspect-video"
       >
-        <img
-          src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+        <Image
+          src={thumbnailUrl}
           alt={title}
-          className="w-full h-full object-cover"
+          width={320}
+          height={180}
+          className="rounded-md"
         />
       </a>
       <div className="p-4">
@@ -34,4 +38,4 @@ const YouTubeVideo = ({ videoId, title, publishedAt }: YouTubeVideoProps) => {
   );
 };
 
-export default YouTubeVideo; 
+export default YouTubeVideo;

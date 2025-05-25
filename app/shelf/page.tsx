@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ShellBox from "../../components/ShellBox";
-import Link from "next/link";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import YouTubeVideo from "../../components/YouTubeVideo";
 import CommandBar from '@/components/TerminalCommandBar'

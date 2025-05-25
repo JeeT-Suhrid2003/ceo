@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import ProjectCard from '../../components/ProjectCard';
 import ShellBox from '../../components/ShellBox';
-import Link from 'next/link';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import CommandBar from '@/components/TerminalCommandBar'
 

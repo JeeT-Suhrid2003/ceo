@@ -122,7 +122,6 @@ export default function Terminal() {
   >
 
       {LINES.map((line, index) => {
-        const fullText = line.text + (line.highlight?.text || '')
 
         const lineContent = (
           <>
